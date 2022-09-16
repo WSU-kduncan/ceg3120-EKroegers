@@ -1,3 +1,4 @@
+# Based on example https://discordpy.readthedocs.io/en/stable/quickstart.html
 import os
 
 import discord
@@ -43,3 +44,4 @@ async def on_message(message):
         await message.channel.send(response)
 
 client.run(TOKEN)
+
