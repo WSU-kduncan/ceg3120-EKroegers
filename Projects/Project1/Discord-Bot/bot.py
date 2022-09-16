@@ -44,10 +44,21 @@ async def on_message(message):
         'In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.',
         'A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.',
     ]
+    life_advice = [
+        'cut out carbs',
+        'maybe another seven hours of idly scrolling on instagram will help',
+        'do crime',
+        'get a job, chump',
+        'your lucky numbers are 9, 1, 435, 1 again, 85, and 12',
+        ]
 
     if message.content == 'towel!':
         #response = random.choice(brooklyn_99_quotes)
         response = random.choice(hitchhiker_quotes)
+        await message.channel.send(response)
+
+    if message.content == 'give me life advice':
+        response = random.choice(life_advice)
         await message.channel.send(response)
 
 client.run(TOKEN)
