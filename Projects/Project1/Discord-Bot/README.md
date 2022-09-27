@@ -1,0 +1,15 @@
+ - Setup
+	- dependencies
+		- Python 3, pip3, and Discord.py all have to be installed
+	- API Token
+		- in the Discord Developer portal you can copy the token for the bot
+	- Where the token goes
+		- the .env file in the same directory as bot.py (or intentsbot.py)
+- Usage
+	- Commands added
+		- You may ask my bot for life advice
+			- saying "give me life advice" prompts a response
+		- The responses are randomly selected from a list
+	- ![The machines begin to steal the jobs of social workers](Documentation_1.png)
+- Research
+	- The Cloud is the solution to having an always-on bot, though you would need to pay to have the service remain on, similar to the AWS server used to edit the README.md right now.
