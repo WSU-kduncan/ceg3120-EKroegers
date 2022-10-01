@@ -37,6 +37,7 @@
 ```bash
  ssh -i ceg3120key.pem ubuntu@3.219.74.79
 ```
+	
 	- went to the ect/hostname file and changed the name, then having to do *sudo reboot* in order to have the changes take effect
 10. Screenshot of the SSH connection
 ![It's done, and it cost me everything](images/Project2_SSH.png)
