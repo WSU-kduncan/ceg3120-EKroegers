@@ -33,11 +33,10 @@
 8. Create a screenshot of instance details
 ![A good EC2 Instance, a proper EC2 Instance](images/Project2_EC2_Instance.png)
 9. SSH into the instance and change the hostname
+	- went to the ect/hostname file and changed the name, then having to do *sudo reboot* in order to have the changes take effect
 
 ```bash
  ssh -i ceg3120key.pem ubuntu@3.219.74.79
-```
-	
-	- went to the ect/hostname file and changed the name, then having to do *sudo reboot* in order to have the changes take effect
+```	
 10. Screenshot of the SSH connection
 ![It's done, and it cost me everything](images/Project2_SSH.png)
