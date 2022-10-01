@@ -13,11 +13,11 @@
 ## Part 2 - Create an EC2 Instance
 1. Create a new instance.
    - AMI selected
-	- Ubuntu
+		- Ubuntu
    - Default username of the instance type selected
-	- ubuntu
+		- ubuntu
    - Instance type selected
-	- t2.micro
+		- t2.micro
 2. Attatch the instance to VPC
 	- In the wizard to create an EC2 instance, the Network Settings tab can be expanded to select a VPC from a drop down list
 3. Determine whether a Public IPv4 address will be auto-assigned to the instance
@@ -34,9 +34,9 @@
 ![A good EC2 Instance, a proper EC2 Instance](images/Project2_EC2_Instance.png)
 9. SSH into the instance and change the hostname
 
-'''bash
+```bash
  ssh -i ceg3120key.pem ubuntu@3.219.74.79
-'''
+```
 	- went to the ect/hostname file and changed the name, then having to do *sudo reboot* in order to have the changes take effect
 10. Screenshot of the SSH connection
 ![It's done, and it cost me everything](images/Project2_SSH.png)
