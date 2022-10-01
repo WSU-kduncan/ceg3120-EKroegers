@@ -38,5 +38,6 @@
 ```bash
  ssh -i ceg3120key.pem ubuntu@3.219.74.79
 ```	
-10. Screenshot of the SSH connection \\
+10. Screenshot of the SSH connection
+
 ![It's done, and it cost me everything](images/Project2_SSH.png)
