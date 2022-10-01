@@ -13,29 +13,30 @@
 ## Part 2 - Create an EC2 Instance
 1. Create a new instance.
    - AMI selected
-     - Ubuntu
+	- Ubuntu
    - Default username of the instance type selected
-     - ubuntu
+	- ubuntu
    - Instance type selected
-     - t2.micro
+	- t2.micro
 2. Attatch the instance to VPC
- - In the wizard to create an EC2 instance, the Network Settings tab can be expanded to select a VPC from a drop down list
+	- In the wizard to create an EC2 instance, the Network Settings tab can be expanded to select a VPC from a drop down list
 3. Determine whether a Public IPv4 address will be auto-assigned to the instance
- - It will not, as there is a setting labelled "Auto-assign public IP" that I have disabled by default, however a private IPv4 address will be allocated
+	- It will not, as there is a setting labelled "Auto-assign public IP" that I have disabled by default, however a private IPv4 address will be allocated
 4. Attach a volume to the instance
- - A volume is automatically attached at instance creation
+	- A volume is automatically attached at instance creation
 5. Tag the instance with a "Name" of "KROEGER-instance"
- - Upon creation you can write in tags the name of your instance
+	- Upon creation you can write in tags the name of your instance
 6. Associate the security group with the instance
- - On createion, you can select existing security groups from a drop down list
+	- On createion, you can select existing security groups from a drop down list
 7. Reserve an Elastic IP address
- - Created an Elastic IP address on the Elastic IP page, and then selected actions, chose associate Elastic IP, and then selected my instance
+	- Created an Elastic IP address on the Elastic IP page, and then selected actions, chose associate Elastic IP, and then selected my instance
 8. Create a screenshot of instance details
 ![A good EC2 Instance, a proper EC2 Instance](images/Project2_EC2_Instance.png)
 9. SSH into the instance and change the hostname
+
 '''bash
  ssh -i ceg3120key.pem ubuntu@3.219.74.79
 '''
- - went to the ect/hostname file and changed the name, then having to do '''sudo reboot''' in order to have the changes take effect
+	- went to the ect/hostname file and changed the name, then having to do *sudo reboot* in order to have the changes take effect
 10. Screenshot of the SSH connection
 ![It's done, and it cost me everything](images/Project2_SSH.png)
