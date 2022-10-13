@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Testing area for AWS: This template builds a linux VM for CEG 2350 @ WSU.
+  Testing area for AWS: This template builds a linux VM just for me, allowing SSH access from trusted networks and create a single instance with an Elastic IP address.
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
@@ -21,13 +21,13 @@ Mappings:
   AWSRegionUbuntu: # AMI for Ubuntu server in each supported region 
     us-east-1:   # N. Virginia
       PV64: NOT_SUPPORTED
-      HVM64: ami-07d0cf3af28718ef8
+      HVM64: ami-07d0cf3af28718ef8 # MUSTCHANGE
       HVMG2: NOT_SUPPORTED
 Resources:
   VPC:
     Type: 'AWS::EC2::VPC'
     Properties:
-      CidrBlock: 10.0.0.0/16
+      CidrBlock: 10.0.0.0/24
       Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
@@ -37,7 +37,7 @@ Resources:
     Type: 'AWS::EC2::Subnet'
     Properties:
       VpcId: !Ref VPC
-      CidrBlock: 10.0.0.0/24
+      CidrBlock: 10.0.0.0/28
       Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
