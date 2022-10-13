@@ -1,5 +1,5 @@
-## Exercise
-# Part 0
+# Exercise
+## Part 0
 
 In a second tab I ping google.com, and in the main tab I open scapy (with sudo) and run `capture = sniff(count=10)`
 Afterwards I can run `capture.show()` to see all of the packets I intercepted.
@@ -19,8 +19,8 @@ Afterwards I can run `capture.show()` to see all of the packets I intercepted.
 0009 Ether / ARP who has 192.168.144.1 says 192.168.154.99
 ```
 
-## Lab
-# Part 1
+# Lab
+## Part 1
 
 ```bash
 >>> ofp = IP()
@@ -41,7 +41,7 @@ Afterwards I can run `capture.show()` to see all of the packets I intercepted.
   \options\
 ```
 
-# Part 2
+## Part 2
 
 ```bash
 >>> ofp = IP(dst="130.108.128.200")
@@ -62,7 +62,7 @@ Afterwards I can run `capture.show()` to see all of the packets I intercepted.
   \options\
 ```
 
-# Part 3
+## Part 3
 
 ```bash
 >>> ofudp = ofp/UDP()
@@ -104,7 +104,7 @@ Afterwards I can run `capture.show()` to see all of the packets I intercepted.
      chksum= None
 ```
 
-# Part 4
+## Part 4
 
 ```bash
 >>> ofdnsp=ofudp/DNS()
@@ -150,7 +150,7 @@ Afterwards I can run `capture.show()` to see all of the packets I intercepted.
         ar= None
 ```
 
-# Part 5
+## Part 5
 
 ```bash
 >>> ofdns= ofudp/DNS(rd=1,qd=DNSQR(qname="www.google.com"))
@@ -200,13 +200,13 @@ Afterwards I can run `capture.show()` to see all of the packets I intercepted.
         ar= None
 ```
 
-# Part *Special*
+## Part *Special*
 
 ```bash
 ofdns= (IP(dst="130.108.128.200")/UDP())/DNS(rd=1,qd=DNSQR(qname="www.google.com"))
 ```
 
-# Part 6
+## Part 6
 
 ```bash
 >>> response = sr(ofdns)
