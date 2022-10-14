@@ -107,10 +107,10 @@ Resources:
     Type: 'AWS::EC2::Instance'
     DependsOn: AttachGateway
     Properties:
-      ImageId: !FindInMap 
+      ImageId: !FindInMap
         - AWSRegionUbuntu
         - !Ref 'AWS::Region'
-        - !FindInMap 
+        - !FindInMap
           - AWSInstanceType2Arch
           - t2.micro
           - Arch
@@ -138,9 +138,9 @@ Resources:
               git \
               htop \
               python3 \
-              pip3 \
+              python3-pip \
               sl && \
             echo "Cool-Server" > /etc/hostname && \
-            sed -i 's/10.0.0.10/Cool-Server/g' /etc/hosts && \
+            sed -i 's/ip-10-0-0-10/Cool-Server/g' /etc/hosts && \
             echo "This is from the CF template" > /home/ubuntu/hello.txt && \
             reboot
