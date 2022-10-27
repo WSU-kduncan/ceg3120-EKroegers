@@ -211,8 +211,9 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
-            # TODO need to install apache or nginx
-            apt-get install -y git && \
-            # TODO give it a hostname - hostnamectl  && \
+            apt-get install -y \
+                git \ 
+                apache2 && \
+            hostnamectl set-hostname CoolServer --static && \
             reboot
 # TODO: create another webserver instance attached to the private subnet
