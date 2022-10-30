@@ -224,7 +224,7 @@ Resources:
             apt-get update && \
             apt-get install -y \
                 git \ 
-                apache2 && \
+                apache2-bin && \
             hostnamectl set-hostname CoolServer && \
             reboot
   WebServ2Instance:
@@ -260,7 +260,7 @@ Resources:
             apt-get update && \
             apt-get install -y \
                 git \
-                apache2 && \
+                apache2-bin && \
             hostnamectl set-hostname CoolServerJr && \
             reboot
 
