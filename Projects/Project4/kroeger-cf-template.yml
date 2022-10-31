@@ -144,28 +144,12 @@ Resources:
         - IpProtocol: tcp
           FromPort: '80'
           ToPort: '80'
-          CidrIp: 10.0.0.0/16 # VPC as a whole.
-        - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
-          CidrIp: 130.108.0.0/16  # WSU CIDR
-        - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
-          CidrIp: 72.49.97.140/32 # Home Network 
+          CidrIp: 0.0.0.0/0 # All
         - IpProtocol: tcp
           FromPort: '443'
           ToPort: '443'
-          CidrIp: 10.0.0.0/16 # VPC as a whole.
-        - IpProtocol: tcp
-          FromPort: '443'
-          ToPort: '443'
-          CidrIp: 130.108.0.0/16  # WSU CIDR
-        - IpProtocol: tcp
-          FromPort: '443'
-          ToPort: '443'
-          CidrIp: 72.49.97.140/32 # Home Network
-      Tags:
+          CidrIp: 0.0.0.0/0 # All
+      Tags: 
         - Key: Name
           Value: P4-sg
   ProxyInstance:
@@ -200,10 +184,10 @@ Resources:
             #!/bin/bash -xe
             apt-get update && \
             apt-get install haproxy && \
-            apt-get install -y \
-            git \
-            python3 \
-            python3-pip && \
+            apt-get install -y \ 
+                git \
+                python3 \ 
+                python3-pip && \
             hostnamectl set-hostname proxy && \
             reboot
   WebServ1Instance:
@@ -278,4 +262,3 @@ Resources:
                 apache2 && \
             hostnamectl set-hostname CoolServerJr && \
             reboot
-
