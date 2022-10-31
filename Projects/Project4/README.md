@@ -18,3 +18,16 @@ Host CoolServerJr
 
 3. HAProxy configuration
 - Load Balancer Documentation
+	- Modified backend as follows:
+```bash
+backend blog-backend
+   balance roundrobin
+   mode http
+   server CoolServer :80 check
+   server CoolServerJr :80 check
+```
+
+4. Webserver 1 and 2 documentation
+- had to modify index file at /var/www/html/ on both servers, and had to modify permissions to properly save it
+- `sudo ufw allow 'Apache'` is necessary to allow all traffic we need
+
