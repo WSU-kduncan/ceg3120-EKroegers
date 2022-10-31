@@ -28,6 +28,11 @@ backend blog-backend
 ```
 
 4. Webserver 1 and 2 documentation
-- had to modify index file at /var/www/html/ on both servers, and had to modify permissions to properly save it
+- had to modify index file hosted locally at /var/www/html/ on both servers, and had to modify permissions to properly save it
 - `sudo ufw allow 'Apache'` is necessary to allow all traffic we need
+- Restart using `sudo systemctl restart apache2`
+- Used https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04 largely
 
+5. Screenshots of webserver content
+![Content numero uno](/Projects/Project4/images/img1.png)
+![dos content](/Projects/Project4/images/img2.png)
