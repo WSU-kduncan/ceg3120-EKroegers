@@ -152,8 +152,20 @@ Resources:
         - IpProtocol: tcp
           FromPort: '80'
           ToPort: '80'
+          CidrIp: 72.49.97.140/32 # Home Network 
+        - IpProtocol: tcp
+          FromPort: '443'
+          ToPort: '443'
+          CidrIp: 10.0.0.0/16 # VPC as a whole.
+        - IpProtocol: tcp
+          FromPort: '443'
+          ToPort: '443'
+          CidrIp: 130.108.0.0/16  # WSU CIDR
+        - IpProtocol: tcp
+          FromPort: '443'
+          ToPort: '443'
           CidrIp: 72.49.97.140/32 # Home Network
-      Tags: 
+      Tags:
         - Key: Name
           Value: P4-sg
   ProxyInstance:
@@ -224,7 +236,7 @@ Resources:
             apt-get update && \
             apt-get install -y \
                 git \ 
-                apache2-bin && \
+                apache2 && \
             hostnamectl set-hostname CoolServer && \
             reboot
   WebServ2Instance:
@@ -260,7 +272,7 @@ Resources:
             apt-get update && \
             apt-get install -y \
                 git \
-                apache2-bin && \
+                apache2 && \
             hostnamectl set-hostname CoolServerJr && \
             reboot
 
