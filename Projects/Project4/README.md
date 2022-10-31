@@ -23,8 +23,8 @@ Host CoolServerJr
 backend blog-backend
    balance roundrobin
    mode http
-   server CoolServer :80 check
-   server CoolServerJr :80 check
+   server CoolServer 54.172.118.120:80 check
+   server CoolServerJr 54.172.118.120:80 check
 ```
 
 4. Webserver 1 and 2 documentation
