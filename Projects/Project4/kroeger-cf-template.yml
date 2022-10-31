@@ -200,7 +200,10 @@ Resources:
             #!/bin/bash -xe
             apt-get update && \
             apt-get install haproxy && \
-            apt-get install -y git python3 python3-pip && \
+            apt-get install -y \
+            git \
+            python3 \
+            python3-pip && \
             hostnamectl set-hostname proxy && \
             reboot
   WebServ1Instance:
